@@ -44,7 +44,7 @@ install:
   - rake bundle:install
 
 script:
-  - rake test:$TEST_SUITE
+  - DEBUG=y rake test:$TEST_SUITE
 
 notifications:
   disable: true
