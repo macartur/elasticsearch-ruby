@@ -103,8 +103,7 @@ module Elasticsearch
                 -D es.path.repo=/tmp \
                 -D es.repositories.url.allowed_urls=http://snapshot.test* \
                 -D es.logger.level=DEBUG \
-                #{arguments[:es_params]} \
-                > /dev/null
+                #{arguments[:es_params]}
               COMMAND
               },
 
@@ -129,8 +128,7 @@ module Elasticsearch
                 -D es.path.repo=/tmp \
                 -D es.repositories.url.allowed_urls=http://snapshot.test* \
                 -D es.logger.level=#{ENV['DEBUG'] ? 'DEBUG' : 'INFO'} \
-                #{arguments[:es_params]} \
-                > /dev/null
+                #{arguments[:es_params]}
               COMMAND
               },
 
@@ -152,8 +150,7 @@ module Elasticsearch
                 -D es.path.repo=/tmp \
                 -D es.repositories.url.allowed_urls=http://snapshot.test* \
                 -D es.logger.level=DEBUG \
-                #{arguments[:es_params]} \
-                > /dev/null
+                #{arguments[:es_params]}
               COMMAND
               },
 
@@ -175,8 +172,7 @@ module Elasticsearch
                 -E discovery.zen.minimum_master_nodes=#{arguments[:number_of_nodes]-1} \
                 -E node.max_local_storage_nodes=#{arguments[:number_of_nodes]} \
                 -E logger.level=DEBUG \
-                #{arguments[:es_params]} \
-                > /dev/null
+                #{arguments[:es_params]}
               COMMAND
             }
           }
